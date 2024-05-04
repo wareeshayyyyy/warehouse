@@ -1,1 +1,14 @@
+import re
+
+def is_decimal(s):
+    # Regular expression to match a decimal number
+    pattern = r'^[-+]?[0-9]*\.[0-9]+$'
+    return bool(re.match(pattern, s))
+
+# Test the function
+number = input("Enter a number: ")
+if is_decimal(number):
+    print(number, "is a decimal number")
+else:
+    print(number, "is not a decimal number")
 
